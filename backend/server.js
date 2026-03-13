@@ -1,0 +1,12 @@
+import ConnectDB from "./src/config/db.js";
+import express from "express";
+import cors from "cors";
+import UserRoutes from "./src/Routes/UserRoutes.js";
+import TaskRoutes from "./src/Routes/TaskRoutes.js";
+const app=express();
+app.use(cors());
+app.use(express.json());
+ConnectDB();
+app.use("/users",UserRoutes);
+app.use("/tasks",TaskRoutes);
+app.listen(5000,()=>{console.log("Backend Started and running at 5000 port ")});
