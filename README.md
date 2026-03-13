@@ -23,6 +23,7 @@ Features:
 9.Responsive user interface
 
 Tech Stack:
+
 ->Frontend
 
 1.React
